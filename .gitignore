@@ -1,0 +1,12 @@
+__pycache__/
+*.pyd
+*.dll
+*.so
+*.exe
+*.log
+*.h5
+*.model
+chat/Lib/
+env/
+venv/
+
