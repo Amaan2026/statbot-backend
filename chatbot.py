@@ -22,12 +22,12 @@ ignore_words = ['?', '!', '@', '#', '$']
 with open('intents.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
-for intent in data['intents']:  # <-- use data['intents'] here
+for intent in data['intents']:  
     for pattern in intent['patterns']:
         w = nltk.word_tokenize(pattern)
         words.extend(w)
         documents.append((w, intent['tag']))
-        # Add the intent tag to classes if not already there
+        
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
 
